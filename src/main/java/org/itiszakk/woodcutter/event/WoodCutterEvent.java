@@ -3,6 +3,7 @@ package org.itiszakk.woodcutter.event;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.After;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.ItemTags;
@@ -24,8 +25,8 @@ public class WoodCutterEvent implements After {
             return;
         }
 
-        ContinuousBlocks treeBlocks = new ContinuousBlocks(world, pos, Direction.UP, this::checkBlockState);
-        treeBlocks.forEach(p -> world.breakBlock(p, true));
+        int brokenBlocks = breakBlocks(world, pos);
+        damageMainItem(player, brokenBlocks);
     }
 
     private boolean canBreakLogs(PlayerEntity player, BlockState state) {
@@ -38,5 +39,23 @@ public class WoodCutterEvent implements After {
 
     private boolean checkBlockState(BlockState state) {
         return state.isIn(BlockTags.LOGS);
+    }
+
+    private int breakBlocks(World world, BlockPos pos) {
+        ContinuousBlocks blocks = new ContinuousBlocks(world, pos, Direction.UP, this::checkBlockState);
+
+        int brokenBlocks = 0;
+
+        for (BlockPos p : blocks) {
+            if (world.breakBlock(p, true)) {
+                brokenBlocks++;
+            }
+        }
+
+        return brokenBlocks;
+    }
+
+    private void damageMainItem(PlayerEntity player, int brokenBlocks) {
+        player.getMainHandStack().damage(brokenBlocks, player, EquipmentSlot.MAINHAND);
     }
 }
