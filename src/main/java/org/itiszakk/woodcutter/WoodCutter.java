@@ -8,7 +8,9 @@ import org.slf4j.LoggerFactory;
 
 public class WoodCutter implements ModInitializer {
 
-    public static final Logger LOGGER = LoggerFactory.getLogger(WoodCutterConstants.MOD_ID);
+    public static final String MOD_ID = "woodcutter";
+
+    public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
     @Override
     public void onInitialize() {
