@@ -1,0 +1,13 @@
+{
+  "modmenu.descriptionTranslation.woodcutter": "Helps in cutting down trees",
+  "woodcutter.menu.title": "WoodCutter settings",
+  "option.modmenu.woodcutter.enabled": "Mod",
+  "option.modmenu.woodcutter.enabled.true": "Enabled",
+  "option.modmenu.woodcutter.enabled.false": "Disabled",
+  "option.modmenu.woodcutter.enabled_in_creative": "Creative",
+  "option.modmenu.woodcutter.enabled_in_creative.true": "Enabled",
+  "option.modmenu.woodcutter.enabled_in_creative.false": "Disabled",
+  "option.modmenu.woodcutter.enabled_while_sneaking": "Sneaking",
+  "option.modmenu.woodcutter.enabled_while_sneaking.true": "Enabled",
+  "option.modmenu.woodcutter.enabled_while_sneaking.false": "Disabled"
+}
