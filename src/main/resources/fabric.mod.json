@@ -3,12 +3,12 @@
 	"id": "woodcutter",
 	"version": "${version}",
 	"name": "WoodCutter",
-	"description": "WoodCutter makes it easier to cut down trees!",
+	"description": "Helps in cutting down trees",
 	"authors": [
 		"itiszakk"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
+		"homepage": "https://github.com/itiszakk/woodcutter",
 		"sources": "https://github.com/itiszakk/woodcutter"
 	},
 	"license": "CC0-1.0",
@@ -17,6 +17,9 @@
 	"entrypoints": {
 		"main": [
 			"org.itiszakk.woodcutter.WoodCutter"
+		],
+		"modmenu": [
+			"org.itiszakk.woodcutter.gui.WoodCutterMenu"
 		]
 	},
 	"mixins": [
@@ -28,7 +31,5 @@
 		"java": ">=21",
 		"fabric-api": "*"
 	},
-	"suggests": {
-		"another-mod": "*"
-	}
+	"suggests": {}
 }
