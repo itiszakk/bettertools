@@ -1,0 +1,13 @@
+{
+  "modmenu.descriptionTranslation.woodcutter": "Помогает в срубке деревьев",
+  "woodcutter.menu.title": "Настройки WoodCutter",
+  "option.modmenu.woodcutter.enabled": "Мод",
+  "option.modmenu.woodcutter.enabled.true": "Включен",
+  "option.modmenu.woodcutter.enabled.false": "Выключен",
+  "option.modmenu.woodcutter.enabled_in_creative": "Креатив",
+  "option.modmenu.woodcutter.enabled_in_creative.true": "Включен",
+  "option.modmenu.woodcutter.enabled_in_creative.false": "Выключен",
+  "option.modmenu.woodcutter.enabled_while_sneaking": "Приседание",
+  "option.modmenu.woodcutter.enabled_while_sneaking.true": "Включено",
+  "option.modmenu.woodcutter.enabled_while_sneaking.false": "Выключено"
+}
