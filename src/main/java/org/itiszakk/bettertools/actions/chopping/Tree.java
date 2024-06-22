@@ -1,4 +1,4 @@
-package org.itiszakk.woodcutter.util;
+package org.itiszakk.bettertools.actions.chopping;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -7,8 +7,6 @@ import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3i;
 import net.minecraft.world.World;
-import org.itiszakk.woodcutter.config.CutMode;
-import org.itiszakk.woodcutter.config.WoodCutterConfiguration;
 
 import java.util.*;
 import java.util.stream.IntStream;
@@ -90,7 +88,7 @@ public class Tree {
     }
 
     private List<BlockPos> getNeighbours(BlockPos current) {
-        return switch (WoodCutterConfiguration.CUT_MODE.getValue()) {
+        return switch (ChoppingActionConfig.MODE.getValue()) {
             case COMPLETE -> getNeighbours(current, NeighbourOffsets.COMPLETE);
             case REALISTIC -> getNeighbours(current, NeighbourOffsets.REALISTIC);
         };
@@ -108,7 +106,11 @@ public class Tree {
                     }
 
                     BlockPos next = current.add(new Vec3i(dx, dy, dz));
-                    neighbours.add(next);
+                    BlockState state = world.getBlockState(next);
+
+                    if (state.isIn(BlockTags.LOGS) || state.isIn(BlockTags.LEAVES)) {
+                        neighbours.add(next);
+                    }
                 }
             }
         }
@@ -124,7 +126,7 @@ public class Tree {
             return allowLog(currentState, parentState);
         }
 
-        if (WoodCutterConfiguration.CUT_LEAVES.getValue() && currentState.isIn(BlockTags.LEAVES)) {
+        if (ChoppingActionConfig.CUT_LEAVES.getValue() && currentState.isIn(BlockTags.LEAVES)) {
             return allowLeaf(currentState);
         }
 
@@ -136,7 +138,7 @@ public class Tree {
     }
 
     private boolean checkLogParent(BlockState parent) {
-        return switch (WoodCutterConfiguration.CUT_MODE.getValue()) {
+        return switch (ChoppingActionConfig.MODE.getValue()) {
             case COMPLETE -> true;
             case REALISTIC -> !parent.isIn(BlockTags.LEAVES);
         };

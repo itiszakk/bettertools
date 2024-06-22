@@ -1,0 +1,19 @@
+{
+  "modmenu.descriptionTranslation.bettertools": "Улучшает оригинальные инструменты",
+  "bettertools.menu.title": "Настройки BetterTools",
+  "option.modmenu.bettertools.chopping.enable": "Включить улучшеную вырубку",
+  "option.modmenu.bettertools.chopping.enable.true": "Да",
+  "option.modmenu.bettertools.chopping.enable.false": "Нет",
+  "option.modmenu.bettertools.chopping.mode": "Режим вырубки",
+  "option.modmenu.bettertools.chopping.mode.realistic": "Реалистичный",
+  "option.modmenu.bettertools.chopping.mode.complete": "Полный",
+  "option.modmenu.bettertools.chopping.use_in_creative": "Использовать вырубку в креативе",
+  "option.modmenu.bettertools.chopping.use_in_creative.true": "Да",
+  "option.modmenu.bettertools.chopping.use_in_creative.false": "Нет",
+  "option.modmenu.bettertools.chopping.use_while_sneaking": "Использовать вырубку во время приседания",
+  "option.modmenu.bettertools.chopping.use_while_sneaking.true": "Да",
+  "option.modmenu.bettertools.chopping.use_while_sneaking.false": "Нет",
+  "option.modmenu.bettertools.chopping.cut_leaves": "Срубать листву",
+  "option.modmenu.bettertools.chopping.cut_leaves.true": "Да",
+  "option.modmenu.bettertools.chopping.cut_leaves.false": "Нет"
+}

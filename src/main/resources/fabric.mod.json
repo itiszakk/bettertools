@@ -1,29 +1,29 @@
 {
 	"schemaVersion": 1,
-	"id": "woodcutter",
+	"id": "bettertools",
 	"version": "${version}",
-	"name": "WoodCutter",
-	"description": "Helps in cutting down trees",
+	"name": "BetterTools",
+	"description": "Enhance original tools",
 	"authors": [
 		"itiszakk"
 	],
 	"contact": {
-		"homepage": "https://github.com/itiszakk/woodcutter",
-		"sources": "https://github.com/itiszakk/woodcutter"
+		"homepage": "https://github.com/itiszakk/bettertools",
+		"sources": "https://github.com/itiszakk/bettertools"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/woodcutter/icon.png",
+	"icon": "assets/bettertools/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"org.itiszakk.woodcutter.WoodCutter"
+			"org.itiszakk.bettertools.BetterTools"
 		],
 		"modmenu": [
-			"org.itiszakk.woodcutter.gui.WoodCutterMenu"
+			"org.itiszakk.bettertools.gui.BetterToolsMenu"
 		]
 	},
 	"mixins": [
-		"woodcutter.mixins.json"
+		"bettertools.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.15.11",

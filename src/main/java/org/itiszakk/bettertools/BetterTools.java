@@ -1,14 +1,14 @@
-package org.itiszakk.woodcutter;
+package org.itiszakk.bettertools;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
-import org.itiszakk.woodcutter.event.WoodCutterEvent;
+import org.itiszakk.bettertools.event.BetterToolsEvent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class WoodCutter implements ModInitializer {
+public class BetterTools implements ModInitializer {
 
-    public static final String MOD_ID = "woodcutter";
+    public static final String MOD_ID = "bettertools";
 
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
@@ -16,6 +16,6 @@ public class WoodCutter implements ModInitializer {
     public void onInitialize() {
         LOGGER.info("Initializing");
 
-        PlayerBlockBreakEvents.AFTER.register(new WoodCutterEvent());
+        PlayerBlockBreakEvents.AFTER.register(new BetterToolsEvent());
     }
 }

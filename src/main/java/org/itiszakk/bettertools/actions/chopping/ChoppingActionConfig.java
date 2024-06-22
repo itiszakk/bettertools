@@ -1,45 +1,47 @@
-package org.itiszakk.woodcutter.config;
+package org.itiszakk.bettertools.actions.chopping;
 
 import com.terraformersmc.modmenu.config.option.BooleanConfigOption;
 import com.terraformersmc.modmenu.config.option.EnumConfigOption;
 import net.minecraft.client.option.SimpleOption;
-import org.itiszakk.woodcutter.WoodCutter;
+import org.itiszakk.bettertools.BetterTools;
 
 import java.util.List;
 
-public class WoodCutterConfiguration {
+public class ChoppingActionConfig {
+
+    private static final String PREFIX = BetterTools.MOD_ID + ".chopping";
 
     public static final BooleanConfigOption ENABLE = new BooleanConfigOption(
-            WoodCutter.MOD_ID + ".enable",
+            PREFIX + ".enable",
             true
     );
 
+    public static final EnumConfigOption<CutMode> MODE = new EnumConfigOption<>(
+            PREFIX + ".mode",
+            CutMode.REALISTIC
+    );
+
     public static final BooleanConfigOption USE_IN_CREATIVE = new BooleanConfigOption(
-            WoodCutter.MOD_ID + ".use_in_creative",
+            PREFIX + ".use_in_creative",
             false
     );
 
     public static final BooleanConfigOption USE_WHILE_SNEAKING = new BooleanConfigOption(
-            WoodCutter.MOD_ID + ".use_while_sneaking",
+            PREFIX + ".use_while_sneaking",
             false
     );
 
     public static final BooleanConfigOption CUT_LEAVES = new BooleanConfigOption(
-            WoodCutter.MOD_ID + ".cut_leaves",
+            PREFIX + ".cut_leaves",
             true
-    );
-
-    public static final EnumConfigOption<CutMode> CUT_MODE = new EnumConfigOption<>(
-            WoodCutter.MOD_ID + ".cut_mode",
-            CutMode.REALISTIC
     );
 
     private static final List<SimpleOption<?>> OPTIONS = List.of(
             ENABLE.asOption(),
+            MODE.asOption(),
             USE_IN_CREATIVE.asOption(),
             USE_WHILE_SNEAKING.asOption(),
-            CUT_LEAVES.asOption(),
-            CUT_MODE.asOption()
+            CUT_LEAVES.asOption()
     );
 
     public static List<SimpleOption<?>> asOptions() {

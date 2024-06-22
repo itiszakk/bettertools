@@ -1,4 +1,4 @@
-package org.itiszakk.woodcutter.gui;
+package org.itiszakk.bettertools.gui;
 
 import com.terraformersmc.modmenu.api.ConfigScreenFactory;
 import com.terraformersmc.modmenu.api.ModMenuApi;
@@ -6,21 +6,21 @@ import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.screen.option.GameOptionsScreen;
 import net.minecraft.text.Text;
-import org.itiszakk.woodcutter.WoodCutter;
-import org.itiszakk.woodcutter.config.WoodCutterConfiguration;
+import org.itiszakk.bettertools.BetterTools;
+import org.itiszakk.bettertools.actions.chopping.ChoppingActionConfig;
 
-public class WoodCutterMenu implements ModMenuApi {
+public class BetterToolsMenu implements ModMenuApi {
 
-    private static final String MENU_TITLE = WoodCutter.MOD_ID + ".menu.title";
+    private static final String MENU_TITLE = BetterTools.MOD_ID + ".menu.title";
 
     @Override
     public ConfigScreenFactory<Screen> getModConfigScreenFactory() {
-        return WoodCutterOptionsScreen::new;
+        return BetterToolsOptionsScreen::new;
     }
 
-    private static class WoodCutterOptionsScreen extends GameOptionsScreen {
+    private static class BetterToolsOptionsScreen extends GameOptionsScreen {
 
-        public WoodCutterOptionsScreen(Screen screen) {
+        public BetterToolsOptionsScreen(Screen screen) {
             super(screen, MinecraftClient.getInstance().options, Text.translatable(MENU_TITLE));
         }
 
@@ -30,7 +30,7 @@ public class WoodCutterMenu implements ModMenuApi {
                 return;
             }
 
-            WoodCutterConfiguration.asOptions()
+            ChoppingActionConfig.asOptions()
                     .forEach(this.body::addSingleOptionEntry);
         }
     }

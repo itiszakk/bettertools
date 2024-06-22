@@ -1,6 +1,6 @@
 {
 	"required": true,
-	"package": "org.itiszakk.woodcutter.mixin",
+	"package": "org.itiszakk.bettertools.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [],
 	"injectors": {
