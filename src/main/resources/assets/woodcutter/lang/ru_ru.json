@@ -1,13 +1,19 @@
 {
   "modmenu.descriptionTranslation.woodcutter": "Помогает в срубке деревьев",
   "woodcutter.menu.title": "Настройки WoodCutter",
-  "option.modmenu.woodcutter.enabled": "Мод",
-  "option.modmenu.woodcutter.enabled.true": "Включен",
-  "option.modmenu.woodcutter.enabled.false": "Выключен",
-  "option.modmenu.woodcutter.enabled_in_creative": "Креатив",
-  "option.modmenu.woodcutter.enabled_in_creative.true": "Включен",
-  "option.modmenu.woodcutter.enabled_in_creative.false": "Выключен",
-  "option.modmenu.woodcutter.enabled_while_sneaking": "Приседание",
-  "option.modmenu.woodcutter.enabled_while_sneaking.true": "Включено",
-  "option.modmenu.woodcutter.enabled_while_sneaking.false": "Выключено"
+  "option.modmenu.woodcutter.enable": "Включить мод",
+  "option.modmenu.woodcutter.enable.true": "Да",
+  "option.modmenu.woodcutter.enable.false": "Нет",
+  "option.modmenu.woodcutter.use_in_creative": "Использовать в креативе",
+  "option.modmenu.woodcutter.use_in_creative.true": "Да",
+  "option.modmenu.woodcutter.use_in_creative.false": "Нет",
+  "option.modmenu.woodcutter.use_while_sneaking": "Использовать во время приседания",
+  "option.modmenu.woodcutter.use_while_sneaking.true": "Да",
+  "option.modmenu.woodcutter.use_while_sneaking.false": "Нет",
+  "option.modmenu.woodcutter.cut_leaves": "Срубать листву",
+  "option.modmenu.woodcutter.cut_leaves.true": "Да",
+  "option.modmenu.woodcutter.cut_leaves.false": "Нет",
+  "option.modmenu.woodcutter.cut_mode": "Режим срубания",
+  "option.modmenu.woodcutter.cut_mode.realistic": "Реалистичный",
+  "option.modmenu.woodcutter.cut_mode.complete": "Полный"
 }

@@ -7,7 +7,7 @@ import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.screen.option.GameOptionsScreen;
 import net.minecraft.text.Text;
 import org.itiszakk.woodcutter.WoodCutter;
-import org.itiszakk.woodcutter.WoodCutterConfiguration;
+import org.itiszakk.woodcutter.config.WoodCutterConfiguration;
 
 public class WoodCutterMenu implements ModMenuApi {
 
