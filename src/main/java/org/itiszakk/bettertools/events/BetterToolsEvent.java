@@ -1,4 +1,4 @@
-package org.itiszakk.bettertools.event;
+package org.itiszakk.bettertools.events;
 
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.After;
 import net.minecraft.block.BlockState;

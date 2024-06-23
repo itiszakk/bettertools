@@ -5,6 +5,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
+
 public abstract class AbstractAction implements Action {
 
     protected final World world;
@@ -29,14 +30,14 @@ public abstract class AbstractAction implements Action {
     }
 
     /**
-     * Skip enhanced action
+     * Checks whether the action should be skipped based on certain conditions.
      *
-     * @return true if skipped, else otherwise
+     * @return true if the action should be skipped, false otherwise
      */
     protected abstract boolean skip();
 
     /**
-     * Execute enhanced action
+     * Performs the main action logic.
      */
     protected abstract void action();
 }

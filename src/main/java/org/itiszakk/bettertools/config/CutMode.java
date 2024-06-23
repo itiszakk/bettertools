@@ -1,4 +1,4 @@
-package org.itiszakk.bettertools.actions.chopping;
+package org.itiszakk.bettertools.config;
 
 public enum CutMode {
     COMPLETE,

@@ -7,7 +7,7 @@ import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.screen.option.GameOptionsScreen;
 import net.minecraft.text.Text;
 import org.itiszakk.bettertools.BetterTools;
-import org.itiszakk.bettertools.actions.chopping.ChoppingActionConfig;
+import org.itiszakk.bettertools.config.ChoppingActionConfig;
 
 public class BetterToolsMenu implements ModMenuApi {
 

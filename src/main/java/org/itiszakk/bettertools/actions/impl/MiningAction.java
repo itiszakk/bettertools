@@ -1,4 +1,4 @@
-package org.itiszakk.bettertools.actions.mining;
+package org.itiszakk.bettertools.actions.impl;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;

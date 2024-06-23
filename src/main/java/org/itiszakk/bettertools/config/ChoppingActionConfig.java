@@ -1,4 +1,4 @@
-package org.itiszakk.bettertools.actions.chopping;
+package org.itiszakk.bettertools.config;
 
 import com.terraformersmc.modmenu.config.option.BooleanConfigOption;
 import com.terraformersmc.modmenu.config.option.EnumConfigOption;

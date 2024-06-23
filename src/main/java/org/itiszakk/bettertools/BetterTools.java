@@ -2,7 +2,7 @@ package org.itiszakk.bettertools;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
-import org.itiszakk.bettertools.event.BetterToolsEvent;
+import org.itiszakk.bettertools.events.BetterToolsEvent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
