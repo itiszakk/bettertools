@@ -6,7 +6,8 @@ import net.minecraft.block.Blocks;
 import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import org.itiszakk.bettertools.config.ChoppingActionConfig;
+import org.itiszakk.bettertools.configuration.ChoppingConfiguration;
+import org.itiszakk.bettertools.configuration.ChoppingConfiguration.CutMode;
 import org.itiszakk.bettertools.search.NeighbourValidator;
 
 import java.util.Map;
@@ -41,7 +42,7 @@ public class ChoppingNeighbourValidator implements NeighbourValidator {
             return allowLog(currentState, parentState);
         }
 
-        if (ChoppingActionConfig.CUT_LEAVES.getValue() && currentState.isIn(BlockTags.LEAVES)) {
+        if (ChoppingConfiguration.CUT_LEAVES.getValue() && currentState.isIn(BlockTags.LEAVES)) {
             return allowLeaf(currentState);
         }
 
@@ -53,9 +54,9 @@ public class ChoppingNeighbourValidator implements NeighbourValidator {
     }
 
     private boolean checkLogParent(BlockState parent) {
-        return switch (ChoppingActionConfig.MODE.getValue()) {
-            case COMPLETE -> true;
-            case REALISTIC -> !parent.isIn(BlockTags.LEAVES);
+        return switch (ChoppingConfiguration.MODE.getValue()) {
+            case CutMode.COMPLETE -> true;
+            case CutMode.REALISTIC -> !parent.isIn(BlockTags.LEAVES);
         };
     }
 

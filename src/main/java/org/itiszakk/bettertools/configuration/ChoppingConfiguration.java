@@ -1,13 +1,14 @@
-package org.itiszakk.bettertools.config;
+package org.itiszakk.bettertools.configuration;
 
 import com.terraformersmc.modmenu.config.option.BooleanConfigOption;
 import com.terraformersmc.modmenu.config.option.EnumConfigOption;
 import net.minecraft.client.option.SimpleOption;
 import org.itiszakk.bettertools.BetterTools;
 
+import java.util.Collection;
 import java.util.List;
 
-public class ChoppingActionConfig {
+public class ChoppingConfiguration {
 
     private static final String PREFIX = BetterTools.MOD_ID + ".chopping";
 
@@ -44,7 +45,12 @@ public class ChoppingActionConfig {
             CUT_LEAVES.asOption()
     );
 
-    public static List<SimpleOption<?>> asOptions() {
+    public static Collection<SimpleOption<?>> asOptions() {
         return OPTIONS;
+    }
+
+    public enum CutMode {
+        COMPLETE,
+        REALISTIC
     }
 }

@@ -19,7 +19,7 @@
 			"org.itiszakk.bettertools.BetterTools"
 		],
 		"modmenu": [
-			"org.itiszakk.bettertools.gui.BetterToolsMenu"
+			"org.itiszakk.bettertools.gui.ConfigurationMenu"
 		]
 	},
 	"mixins": [

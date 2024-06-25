@@ -5,7 +5,8 @@ import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3i;
 import net.minecraft.world.World;
-import org.itiszakk.bettertools.config.ChoppingActionConfig;
+import org.itiszakk.bettertools.configuration.ChoppingConfiguration;
+import org.itiszakk.bettertools.configuration.ChoppingConfiguration.CutMode;
 import org.itiszakk.bettertools.search.NeighboursProvider;
 import org.itiszakk.bettertools.search.utils.NeighbourOffsets;
 import org.itiszakk.bettertools.search.utils.Range;
@@ -35,9 +36,9 @@ public class ChoppingNeighboursProvider implements NeighboursProvider {
 
     @Override
     public List<BlockPos> neighbours(BlockPos pos) {
-        return switch (ChoppingActionConfig.MODE.getValue()) {
-            case COMPLETE -> neighbours(pos, COMPLETE_OFFSETS);
-            case REALISTIC -> neighbours(pos, REALISTIC_OFFSETS);
+        return switch (ChoppingConfiguration.MODE.getValue()) {
+            case CutMode.COMPLETE -> neighbours(pos, COMPLETE_OFFSETS);
+            case CutMode.REALISTIC -> neighbours(pos, REALISTIC_OFFSETS);
         };
     }
 

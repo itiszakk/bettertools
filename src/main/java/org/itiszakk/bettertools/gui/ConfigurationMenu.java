@@ -7,9 +7,9 @@ import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.screen.option.GameOptionsScreen;
 import net.minecraft.text.Text;
 import org.itiszakk.bettertools.BetterTools;
-import org.itiszakk.bettertools.config.ChoppingActionConfig;
+import org.itiszakk.bettertools.configuration.ChoppingConfiguration;
 
-public class BetterToolsMenu implements ModMenuApi {
+public class ConfigurationMenu implements ModMenuApi {
 
     private static final String MENU_TITLE = BetterTools.MOD_ID + ".menu.title";
 
@@ -30,7 +30,7 @@ public class BetterToolsMenu implements ModMenuApi {
                 return;
             }
 
-            ChoppingActionConfig.asOptions()
+            ChoppingConfiguration.asOptions()
                     .forEach(this.body::addSingleOptionEntry);
         }
     }
