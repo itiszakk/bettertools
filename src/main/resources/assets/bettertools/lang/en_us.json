@@ -1,19 +1,10 @@
 {
   "modmenu.descriptionTranslation.bettertools": "Enhances original tools",
   "bettertools.menu.title": "BetterTools Settings",
-  "option.modmenu.bettertools.chopping.enable": "Enable Enhanced Chopping",
-  "option.modmenu.bettertools.chopping.enable.true": "Yes",
-  "option.modmenu.bettertools.chopping.enable.false": "No",
-  "option.modmenu.bettertools.chopping.mode": "Chopping Mode",
-  "option.modmenu.bettertools.chopping.mode.realistic": "Realistic",
-  "option.modmenu.bettertools.chopping.mode.complete": "Complete",
-  "option.modmenu.bettertools.chopping.use_in_creative": "Use Chopping in Creative Mode",
-  "option.modmenu.bettertools.chopping.use_in_creative.true": "Yes",
-  "option.modmenu.bettertools.chopping.use_in_creative.false": "No",
-  "option.modmenu.bettertools.chopping.use_while_sneaking": "Use Chopping While Sneaking",
-  "option.modmenu.bettertools.chopping.use_while_sneaking.true": "Yes",
-  "option.modmenu.bettertools.chopping.use_while_sneaking.false": "No",
-  "option.modmenu.bettertools.chopping.cut_leaves": "Cut Leaves",
-  "option.modmenu.bettertools.chopping.cut_leaves.true": "Yes",
-  "option.modmenu.bettertools.chopping.cut_leaves.false": "No"
+  "bettertools.chopping": "Chopping",
+  "bettertools.chopping.enable": "Enable Enhanced Chopping",
+  "bettertools.chopping.mode": "Chopping Mode",
+  "bettertools.chopping.use_in_creative": "Use Chopping in Creative Mode",
+  "bettertools.chopping.use_while_sneaking": "Use Chopping While Sneaking",
+  "bettertools.chopping.cut_leaves": "Cut Leaves"
 }

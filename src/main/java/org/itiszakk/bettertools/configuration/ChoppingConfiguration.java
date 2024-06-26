@@ -1,53 +1,29 @@
 package org.itiszakk.bettertools.configuration;
 
-import com.terraformersmc.modmenu.config.option.BooleanConfigOption;
-import com.terraformersmc.modmenu.config.option.EnumConfigOption;
-import net.minecraft.client.option.SimpleOption;
 import org.itiszakk.bettertools.BetterTools;
+import org.itiszakk.bettertools.options.impl.BooleanOption;
+import org.itiszakk.bettertools.options.impl.EnumOption;
+import org.itiszakk.bettertools.options.Option;
 
 import java.util.Collection;
 import java.util.List;
 
-public class ChoppingConfiguration {
+public final class ChoppingConfiguration {
 
-    private static final String PREFIX = BetterTools.MOD_ID + ".chopping";
+    public static final String CATEGORY = BetterTools.MOD_ID + ".chopping";
 
-    public static final BooleanConfigOption ENABLE = new BooleanConfigOption(
-            PREFIX + ".enable",
-            true
-    );
+    public static BooleanOption ENABLE = BooleanOption.of(CATEGORY + ".enable", true);
+    public static BooleanOption USE_IN_CREATIVE = BooleanOption.of(CATEGORY + ".use_in_creative", false);
+    public static BooleanOption USE_WHILE_SNEAKING = BooleanOption.of(CATEGORY + ".use_while_sneaking", false);
+    public static BooleanOption CUT_LEAVES = BooleanOption.of(CATEGORY + ".cut_leaves", true);
+    public static EnumOption<CutMode> MODE = EnumOption.of(CATEGORY + ".mode", CutMode.REALISTIC);
 
-    public static final EnumConfigOption<CutMode> MODE = new EnumConfigOption<>(
-            PREFIX + ".mode",
-            CutMode.REALISTIC
-    );
-
-    public static final BooleanConfigOption USE_IN_CREATIVE = new BooleanConfigOption(
-            PREFIX + ".use_in_creative",
-            false
-    );
-
-    public static final BooleanConfigOption USE_WHILE_SNEAKING = new BooleanConfigOption(
-            PREFIX + ".use_while_sneaking",
-            false
-    );
-
-    public static final BooleanConfigOption CUT_LEAVES = new BooleanConfigOption(
-            PREFIX + ".cut_leaves",
-            true
-    );
-
-    private static final List<SimpleOption<?>> OPTIONS = List.of(
-            ENABLE.asOption(),
-            MODE.asOption(),
-            USE_IN_CREATIVE.asOption(),
-            USE_WHILE_SNEAKING.asOption(),
-            CUT_LEAVES.asOption()
-    );
-
-    public static Collection<SimpleOption<?>> asOptions() {
-        return OPTIONS;
-    }
+    public static final Collection<Option<?>> OPTIONS = List.of(
+            ENABLE,
+            USE_IN_CREATIVE,
+            USE_WHILE_SNEAKING,
+            CUT_LEAVES,
+            MODE);
 
     public enum CutMode {
         COMPLETE,
