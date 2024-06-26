@@ -27,8 +27,8 @@ public class ChoppingAction extends AbstractAction {
     }
 
     @Override
-    protected boolean skip() {
-        return !useInCreative(player) || !useWhileSneaking(player);
+    protected boolean check() {
+        return ChoppingConfiguration.ENABLE.getValue() && checkCreative(player) && checkSneaking(player);
     }
 
     @Override
@@ -57,11 +57,11 @@ public class ChoppingAction extends AbstractAction {
         return amount;
     }
 
-    private boolean useInCreative(PlayerEntity player) {
+    private boolean checkCreative(PlayerEntity player) {
         return !player.isInCreativeMode() || ChoppingConfiguration.USE_IN_CREATIVE.getValue();
     }
 
-    private boolean useWhileSneaking(PlayerEntity player) {
+    private boolean checkSneaking(PlayerEntity player) {
         return !player.isSneaking() || ChoppingConfiguration.USE_WHILE_SNEAKING.getValue();
     }
 }

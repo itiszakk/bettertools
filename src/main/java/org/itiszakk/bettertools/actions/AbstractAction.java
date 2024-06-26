@@ -22,7 +22,7 @@ public abstract class AbstractAction implements Action {
 
     @Override
     public void execute() {
-        if (skip()) {
+        if (!check()) {
             return;
         }
 
@@ -30,11 +30,11 @@ public abstract class AbstractAction implements Action {
     }
 
     /**
-     * Checks whether the action should be skipped based on certain conditions.
+     * Checks whether the action should be performed
      *
-     * @return true if the action should be skipped, false otherwise
+     * @return true if the action should be performed, false otherwise
      */
-    protected abstract boolean skip();
+    protected abstract boolean check();
 
     /**
      * Performs the main action logic.

@@ -16,13 +16,13 @@ public class DefaultAction extends AbstractAction {
     }
 
     /**
-     * Always returns true to skip this action.
+     * Always returns false to skip this action.
      *
-     * @return true to skip this action
+     * @return false to skip this action
      */
     @Override
-    protected boolean skip() {
-        return true;
+    protected boolean check() {
+        return false;
     }
 
     /**

@@ -13,12 +13,12 @@ public class MiningAction extends AbstractAction {
     }
 
     @Override
-    protected boolean skip() {
-        return false;
+    protected boolean check() {
+        return true;
     }
 
     @Override
     protected void action() {
-
+        
     }
 }
