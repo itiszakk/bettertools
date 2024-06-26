@@ -17,30 +17,37 @@ import org.itiszakk.bettertools.options.impl.BooleanOption;
 import org.itiszakk.bettertools.options.impl.EnumOption;
 
 import java.util.Collection;
+import java.util.Map;
 import java.util.Objects;
 
 public class ConfigurationMenu implements ModMenuApi {
 
     private static final String MENU_TITLE = BetterTools.MOD_ID + ".menu.title";
 
+    private static final Map<String, Collection<Option<?>>> OPTIONS_BY_CATEGORY = Map.ofEntries(
+            Map.entry(ChoppingConfiguration.CATEGORY, ChoppingConfiguration.OPTIONS)
+    );
+
     @Override
     public ConfigScreenFactory<Screen> getModConfigScreenFactory() {
-        return this::buildConfigurationMenu;
+        return screen -> {
+
+            ConfigBuilder builder = ConfigBuilder.create()
+                    .setParentScreen(screen)
+                    .setTitle(Text.translatable(MENU_TITLE));
+
+            OPTIONS_BY_CATEGORY.forEach((key, options) ->
+                    buildCategory(key, options, builder, builder.entryBuilder()));
+
+            return builder.build();
+        };
     }
 
-    private Screen buildConfigurationMenu(Screen parent) {
-        ConfigBuilder builder = ConfigBuilder.create()
-                .setParentScreen(parent)
-                .setTitle(Text.translatable(MENU_TITLE));
-
-        buildCategory(ChoppingConfiguration.CATEGORY, ChoppingConfiguration.OPTIONS, builder);
-
-        return builder.build();
-    }
-
-    private void buildCategory(String key, Collection<Option<?>> options, ConfigBuilder builder) {
-        ConfigCategory category = builder.getOrCreateCategory(Text.translatable(key));
-        ConfigEntryBuilder entryBuilder = builder.entryBuilder();
+    private void buildCategory(String key,
+                               Collection<Option<?>> options,
+                               ConfigBuilder configBuilder,
+                               ConfigEntryBuilder entryBuilder) {
+        ConfigCategory category = configBuilder.getOrCreateCategory(Text.translatable(key));
 
         options.stream()
                 .map(option -> buildEntry(option, entryBuilder))
