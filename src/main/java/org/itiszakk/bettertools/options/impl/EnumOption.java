@@ -1,6 +1,5 @@
 package org.itiszakk.bettertools.options.impl;
 
-import net.minecraft.text.Text;
 import org.itiszakk.bettertools.options.AbstractOption;
 
 public class EnumOption<T extends Enum<T>> extends AbstractOption<T> {
