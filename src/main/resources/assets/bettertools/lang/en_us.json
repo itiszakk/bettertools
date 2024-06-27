@@ -2,9 +2,15 @@
   "modmenu.descriptionTranslation.bettertools": "Enhances original tools",
   "bettertools.menu.title": "BetterTools Settings",
   "bettertools.chopping": "Chopping",
-  "bettertools.chopping.enable": "Enable Enhanced Chopping",
-  "bettertools.chopping.mode": "Chopping Mode",
-  "bettertools.chopping.use_in_creative": "Use Chopping in Creative Mode",
-  "bettertools.chopping.use_while_sneaking": "Use Chopping While Sneaking",
-  "bettertools.chopping.cut_leaves": "Cut Leaves"
+  "bettertools.chopping.enable": "Enable",
+  "bettertools.chopping.mode": "Mode",
+  "bettertools.chopping.mode.realistic": "Realistic",
+  "bettertools.chopping.mode.complete": "Complete",
+  "bettertools.chopping.use_in_creative": "Use In Creative Mode",
+  "bettertools.chopping.use_while_sneaking": "Use While Sneaking",
+  "bettertools.chopping.cut_leaves": "Cut leaves",
+  "bettertools.mining": "Mining",
+  "bettertools.mining.enable": "Enable",
+  "bettertools.mining.width": "Width",
+  "bettertools.mining.height": "Height"
 }

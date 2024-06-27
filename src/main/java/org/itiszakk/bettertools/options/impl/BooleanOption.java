@@ -1,41 +1,27 @@
 package org.itiszakk.bettertools.options.impl;
 
-import net.minecraft.text.Text;
-import org.itiszakk.bettertools.options.Option;
+import org.itiszakk.bettertools.options.AbstractOption;
 
-public class BooleanOption implements Option<Boolean> {
+public class BooleanOption extends AbstractOption<Boolean> {
 
-    private final Text key;
-    private final Boolean defaultValue;
-    private Boolean value;
-
-    private BooleanOption(Text key, Boolean defaultValue) {
-        this.key = key;
-        this.defaultValue = defaultValue;
-        this.value = defaultValue;
+    protected BooleanOption(Builder builder) {
+        super(builder);
     }
 
-    public static BooleanOption of(String key, Boolean defaultValue) {
-        return new BooleanOption(Text.translatable(key), defaultValue);
+    public static Builder builder() {
+        return new Builder();
     }
 
-    @Override
-    public Text getKey() {
-        return key;
-    }
+    public static class Builder extends AbstractOption.Builder<Boolean, Builder> {
 
-    @Override
-    public Boolean getDefaultValue() {
-        return defaultValue;
-    }
+        @Override
+        protected Builder self() {
+            return this;
+        }
 
-    @Override
-    public Boolean getValue() {
-        return value;
-    }
-
-    @Override
-    public void setValue(Boolean value) {
-        this.value = value;
+        @Override
+        public BooleanOption build() {
+            return new BooleanOption(this);
+        }
     }
 }

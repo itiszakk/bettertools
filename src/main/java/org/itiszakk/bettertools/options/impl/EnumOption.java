@@ -1,47 +1,41 @@
 package org.itiszakk.bettertools.options.impl;
 
 import net.minecraft.text.Text;
-import org.itiszakk.bettertools.options.Option;
+import org.itiszakk.bettertools.options.AbstractOption;
 
-public class EnumOption<T extends Enum<T>> implements Option<T> {
+public class EnumOption<T extends Enum<T>> extends AbstractOption<T> {
 
-    private final Text key;
-    private final T defaultValue;
     private final Class<T> enumClass;
-    private T value;
 
-    private EnumOption(Text key, T defaultValue) {
-        this.key = key;
-        this.defaultValue = defaultValue;
-        this.enumClass = defaultValue.getDeclaringClass();
-        this.value = defaultValue;
-    }
-
-    public static <T extends Enum<T>> EnumOption<T> of(String key, T defaultValue) {
-        return new EnumOption<>(Text.translatable(key), defaultValue);
-    }
-
-    @Override
-    public Text getKey() {
-        return key;
-    }
-
-    @Override
-    public T getDefaultValue() {
-        return defaultValue;
-    }
-
-    @Override
-    public T getValue() {
-        return value;
-    }
-
-    @Override
-    public void setValue(T value) {
-        this.value = value;
+    protected EnumOption(Builder<T> builder) {
+        super(builder);
+        this.enumClass = builder.enumClass;
     }
 
     public Class<T> getEnumClass() {
         return enumClass;
+    }
+
+    public static <T extends Enum<T>> Builder<T> builder(Class<T> enumClass) {
+        return new Builder<>(enumClass);
+    }
+
+    public static class Builder<T extends Enum<T>> extends AbstractOption.Builder<T, Builder<T>> {
+
+        private final Class<T> enumClass;
+
+        public Builder(Class<T> enumClass) {
+            this.enumClass = enumClass;
+        }
+
+        @Override
+        protected Builder<T> self() {
+            return this;
+        }
+
+        @Override
+        public EnumOption<T> build() {
+            return new EnumOption<>(this);
+        }
     }
 }

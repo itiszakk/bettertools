@@ -1,10 +1,16 @@
 {
   "modmenu.descriptionTranslation.bettertools": "Улучшает оригинальные инструменты",
   "bettertools.menu.title": "Настройки BetterTools",
-  "bettertools.chopping": "Вырубка",
-  "bettertools.chopping.enable": "Включить улучшеную вырубку",
-  "bettertools.chopping.mode": "Режим вырубки",
-  "bettertools.chopping.use_in_creative": "Использовать вырубку в креативе",
-  "bettertools.chopping.use_while_sneaking": "Использовать вырубку во время приседания",
-  "bettertools.chopping.cut_leaves": "Срубать листву"
+  "bettertools.chopping": "Рубка леса",
+  "bettertools.chopping.enable": "Включить",
+  "bettertools.chopping.mode": "Режим",
+  "bettertools.chopping.mode.realistic": "Реалистичный",
+  "bettertools.chopping.mode.complete": "Полный",
+  "bettertools.chopping.use_in_creative": "Использовать в креативе",
+  "bettertools.chopping.use_while_sneaking": "Использовать во время приседания",
+  "bettertools.chopping.cut_leaves": "Срубать листву",
+  "bettertools.mining": "Горное дело",
+  "bettertools.mining.enable": "Включить",
+  "bettertools.mining.width": "Ширина",
+  "bettertools.mining.height": "Высота"
 }

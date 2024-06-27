@@ -4,7 +4,9 @@ import net.minecraft.text.Text;
 
 public interface Option<T> {
 
-    Text getKey();
+    String getKey();
+
+    String getTooltip();
 
     T getDefaultValue();
 
